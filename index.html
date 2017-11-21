@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Onboarding</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="styles.css" rel="stylesheet">
+    </head>
+    <body>
+       <div class="container">
+            <header class="center">
+            <h2>Choose the plan that works for you</h2>
+            <p class="center">Get the tools and support needed to build your 
+            business, so you can create the life you want.</p>
+        </header>
+        <div class="billing-type center">
+            <ul class="billing-list">
+                <li class="billing selected">Monthly billing</li>
+                <li class="billing">Annual billing</li>
+            </ul>
+        </div>
+        <div class="billing-plans center">
+            <!-- Plan #1 -->
+            <div class="plan">
+                <div class="plan-header center">Hobbiest</div>
+                <p class="plan-description">You occasionally spend copious amounts of time moving pixels with your computer and sipping lattes.</p>
+                <div class="plan-cost center">
+                    <span class="symbol">$</span>
+                    <span class="price"><span class="amount">0</span>/ month</span>
+                </div>
+                <div class="plan-details">
+                    <ul class="details-list">
+                        <li class="detail">1 domain</li>
+                        <li class="detail">512MB Memory</li>
+                        <li class="detail">1 Core Processor</li>
+                        <li class="detail">500GB Disk Space</li>
+                        <li class="detail">72 Hour Support SLA</li>
+                    </ul>
+                </div>
+                    <div class="choose-btn">
+                    <button class="choose">Choose plan</button>
+                </div>
+             </div>
+                <!-- Plan #2 -->
+                 <div class="plan active-start">
+                <div class="plan-header center">Squad</div>
+                <p class="plan-description">You and your friends come up with million dollar ideas daily and want to share with the interwebs.</p>
+                <div class="plan-cost center">
+                    <span class="symbol">$</span>
+                    <span class="price"><span class="amount">40</span> / month</span>
+                </div>
+                <div class="plan-details">
+                    <ul class="details-list">
+                        <li class="detail">12 domains</li>
+                        <li class="detail">12GB Memory</li>
+                        <li class="detail">2 Core Processor</li>
+                        <li class="detail">1TB Disk Space</li>
+                        <li class="detail">Business Hour Support</li>
+                    </ul>
+                </div>
+                <div class="choose-btn">
+                    <button class="choose">Choose plan</button>
+                </div>
+            </div>
+            <!-- Plan #3 -->
+             <div class="plan">
+                <div class="plan-header center">Starship Enterprise</div>
+                <p class="plan-description">You built a product and for some reason people keep using it so you need more server juice.</p>
+                <div class="plan-cost center">
+                    <span class="symbol">$</span>
+                    <span class="price"><span class="amount">200</span> / month</span>
+                </div>
+                <div class="plan-details">
+                    <ul class="details-list">
+                        <li class="detail">20 domains</li>
+                        <li class="detail">64GB Memory</li>
+                        <li class="detail">8 Core Processor</li>
+                        <li class="detail">Unlimited Disk Space</li>
+                        <li class="detail">24/7 On Call Support</li>
+                    </ul>
+                </div>
+                <div class="choose-btn">
+                    <button class="choose">Choose plan</button>
+                </div>
+            </div>
+            </div>
+        </div>
+        <div class="curve-container">
+            <div class="curve"></div>
+        </div>
+       </div>
+       <script
+        src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+       <script>
+        $(".billing-plans .plan").hover(function() {
+                $(".plan.active-start").removeClass('active-start')
+                $(this).toggleClass("active");
+        });
+
+        $(".billing-plans").mouseleave(function() {
+            $(".plan:nth-child(2)").addClass('active-start')
+            console.log("moused out")
+        })
+       </script>
+    </body>
+</html>

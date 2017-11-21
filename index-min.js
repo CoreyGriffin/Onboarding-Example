@@ -1,0 +1,1 @@
+"use strict";$(".plan").hover(function(){$(this).toggleClass("active")});
